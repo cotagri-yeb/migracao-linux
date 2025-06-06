@@ -24,60 +24,6 @@
 
 ## 3. Fases do Projeto e Tarefas Detalhadas
 
-### Fase 1: Planejamento e Preparação
-
-**Objetivo:** Coletar informações, planejar a estratégia e preparar o ambiente.
-
-#### Tarefa 1.1: Inventário Completo dos Servidores Atuais
-
-Listar todos os servidores a serem migrados.
-
-Para cada servidor:
-- Nome do servidor / IP.
-- Função (web, banco de dados, e-mail, etc.).
-- Lista de domínios hospedados.
-- Versão do CentOS 7.
-- Versão do cPanel/WHM.
-- Tamanho do disco utilizado.
-- Uso de RAM e CPU.
-- Lista de softwares/serviços adicionais instalados (Apache, Nginx, PHP, MySQL/MariaDB, Postfix, Dovecot, etc.).
-- Versões de PHP e MySQL/MariaDB utilizadas pelos sites.
-- Configurações personalizadas (mod_security, httpd.conf, php.ini, my.cnf, etc.).
-- Scripts cron agendados.
-- Certificados SSL (anotar paths e nomes).
-- Contas de e-mail e tamanhos de caixas postais.
-
-#### Tarefa 1.2: Avaliação da Infraestrutura na HostGator
-
-- Confirmar se a HostGator oferece ou permite a instalação de AlmaLinux em novas instâncias (VPS ou Dedicado).
-- Verificar os planos disponíveis que atendam aos requisitos de hardware dos novos servidores AlmaLinux.
-- Discutir com o suporte da HostGator o processo de "upgrade" ou migração, se eles oferecem alguma ferramenta ou serviço para isso.
-
-#### Tarefa 1.3: Definição da Estratégia de Migração
-
-- **Criação de Nova Instância:** Provisionar um novo servidor com AlmaLinux e cPanel na HostGator e migrar os dados para ele. Isso minimiza o risco de quebrar o ambiente atual.
-
-#### Tarefa 1.4: Documentação de Credenciais
-
-Organizar todas as credenciais de acesso (root, cPanel/WHM, FTP, bancos de dados) em um local seguro.
-
----
-
-### Fase 2: Backup e Provisionamento
-
-**Objetivo:** Realizar backups completos e provisionar os novos servidores AlmaLinux.
-
-#### Tarefa 2.1: Realizar Backups Completos dos Servidores Atuais
-
-**Backup do cPanel/WHM:**
-- Via WHM: "Backup Configuration" -> "Backup All Accounts". Gerar um backup completo para cada conta.
-- Baixar os arquivos de backup para um local seguro (máquina local, armazenamento externo).
-
-**Backup Adicional (Manual, se necessário):**
-- rsync de diretórios críticos: `/etc`, `/var/www`, `/var/lib/mysql` (se não estiverem inclusos no backup do cPanel), `/home`.
-
-## 3. Fases do Projeto e Tarefas Detalhadas
-
 ### Fase 3: Migração de Dados
 
 **Objetivo:** Transferir os dados e configurar os novos servidores.
