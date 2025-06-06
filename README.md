@@ -76,28 +76,6 @@ Organizar todas as credenciais de acesso (root, cPanel/WHM, FTP, bancos de dados
 **Backup Adicional (Manual, se necessário):**
 - rsync de diretórios críticos: `/etc`, `/var/www`, `/var/lib/mysql` (se não estiverem inclusos no backup do cPanel), `/home`.
 
-## 1. Visão Geral do Projeto
-
-**Objetivo:** Migrar servidores CentOS 7 hospedados na HostGator para AlmaLinux, garantindo a funcionalidade e o suporte do cPanel, com o mínimo de tempo de inatividade.
-
-- **Servidores Envolvidos:** [Listar aqui a quantidade e, se possível, os nomes/funções dos servidores]
-- **Ferramentas Principais:** cPanel/WHM (backup/restauração), SSH, rsync, ferramentas de virtualização (se aplicável, para snapshots/clones).
-- **Ambiente de Destino:** AlmaLinux (versão mais recente estável, atualmente AlmaLinux 9.x)
-
-## 2. Riscos e Mitigações
-
-| Risco                           | Mitigação                                                                 |
-|----------------------------------|---------------------------------------------------------------------------|
-| Perda de dados                   | Backups completos e verificados antes da migração.                        |
-| Tempo de inatividade prolongado  | Planejamento detalhado, testes em ambiente de homologação, migração em horários de baixo tráfego. |
-| Problemas de compatibilidade     | Testes rigorosos dos aplicativos após a migração.                         |
-| Falha na restauração do cPanel   | Verificação da integridade dos backups do cPanel.                         |
-| Configurações de rede incorretas | Anotação das configurações de rede antigas e validação das novas.         |
-| Problemas de DNS                 | Atualização cuidadosa dos registros DNS e atenção ao TTL.                 |
-| Suporte HostGator                | Verificar as opções de VPS ou Dedicated Servers que oferecem AlmaLinux e discutir o processo com o suporte deles. |
-
----
-
 ## 3. Fases do Projeto e Tarefas Detalhadas
 
 ### Fase 3: Migração de Dados
