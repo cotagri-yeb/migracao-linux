@@ -98,25 +98,25 @@ Este é um cronograma estimado e pode variar por varios fatores, imprevistos na 
 
 | Fase / Semana                       | Dias      | Tarefas Principais                                                                 |
 |--------------------------------------|-----------|------------------------------------------------------------------------------------|
-|Planejamento e Preparação  | Dia 1     | Reunião de kickoff, inventário inicial, avaliação HostGator.                       |
-|                                      | Dia 2     | Detalhamento do inventário, análise de riscos.                                     |
-|                                      | Dia 3     | Definição da estratégia, revisão de recursos.                                      |
-|                                      | Dia 4     | Preparação de ambiente.                                   |
-|                                      | Dia 5     | Documentação de credenciais, planejamento de backups.                              |
-|Backup e Provisionamento   | Dia 6     | Realização de backups completos dos servidores.                                    |
-|                                      | Dia 7     | Transferência de backups para local seguro, verificação.                           |
-|                                      | Dia 8     | Provisionamento de novos servidores AlmaLinux.                       |
-|                                      | Dia 9     | Configuração inicial dos novos servidores (updates, hostname, firewall).           |
-|                                      | Dia 10    | Instalação de pacotes essenciais, verificação cPanel.                              |
-| Semana 3: Migração de Dados          | Dia 11    | Transferência de backups para os novos servidores.                                 |
-|                                      | Dia 12    | Restauração de contas cPanel (Servidor 1).                                        |
-|                                      | Dia 13    | Restauração de contas cPanel (Servidor 2).                             |
-|                                      | Dia 14    | Migração de configurações personalizadas.                                          |
-|                                      | Dia 15    | Testes iniciais via arquivo hosts (Servidor 1).                                   |
-|Cutover e Finalização                 | Dia 16 em diante| Testes iniciais via arquivo hosts (Servidor 2).                        |
+|Planejamento e Preparação             | Semana 1  | Reunião de kickoff, inventário inicial, avaliação HostGator.                       |
+|                                      |           | Detalhamento do inventário, análise de riscos.                                     |
+|                                      | Semana 2  | Definição da estratégia, revisão de recursos.                                      |
+|                                      |           | Preparação de ambiente.                                   |
+|                                      | Semana 3  | Documentação de credenciais, planejamento de backups.                              |
+|Backup e Provisionamento              |           | Realização de backups completos dos servidores.                                    |
+|                                      |           | Transferência de backups para local seguro, verificação.                           |
+|                                      | Semana 4  | Provisionamento de novos servidores AlmaLinux.                       |
+|                                      |           | Configuração inicial dos novos servidores (updates, hostname, firewall).           |
+|                                      |           | Instalação de pacotes essenciais, verificação cPanel.                              |
+| Semana 3: Migração de Dados          | Semana 5  | Transferência de backups para os novos servidores.                                 |
+|                                      |           | Restauração de contas cPanel (Servidor 1).                                        |
+|                                      |           | Restauração de contas cPanel (Servidor 2).                             |
+|                                      | Semana 6  | Migração de configurações personalizadas.                                          |
+|                                      |           | Testes iniciais via arquivo hosts (Servidor 2).                                   |
+|Cutover e Finalização                 | Semana 7  | Testes iniciais via arquivo hosts (Servidor 1).                        |
 |                                      |           | Ajuste fino e otimização (se necessário).                                         |
-|                                      |           | Preparação para Cutover: Redução do TTL de DNS.                                   |
-|                                      |           | Dia do Cutover: Atualização de registros DNS, monitoramento intensivo.            |
+|                                      | Semana 8  | Preparação para Cutover: Redução do TTL de DNS.                                   |
+|                                      | Em diante | Dia do Cutover: Atualização de registros DNS, monitoramento intensivo.            |
 |                                      |           | Monitoramento contínuo, validação final.                                          |
 | Pós-Migração                         |           | Monitoramento da estabilidade, resolução de possíveis problemas.                   |
 |                                      |           | Descomissionamento gradual dos servidores antigos (após 1 semana de estabilidade). |
